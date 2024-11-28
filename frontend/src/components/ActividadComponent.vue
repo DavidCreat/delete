@@ -45,7 +45,7 @@ export default {
         return;
       }
 
-      axios.get("http://127.0.0.1:8000/api/actividades/", {
+      axios.get("http://127.0.0.1:8001/api/actividades/", {
         headers: {
           Authorization: `Bearer ${token}`  // Token en el encabezado
         }
@@ -67,7 +67,7 @@ export default {
         return;
       }
 
-      axios.post("http://127.0.0.1:8000/api/actividades/", this.nuevaActividad, {
+      axios.post("http://127.0.0.1:8001/api/actividades/", this.nuevaActividad, {
         headers: {
           Authorization: `Bearer ${token}`  // Agregamos el token en las cabeceras
         }
@@ -97,7 +97,7 @@ export default {
           return;
         }
 
-        axios.put(`http://127.0.0.1:8000/api/actividades/${actividad.id}/`, {
+        axios.put(`http://127.0.0.1:8001/api/actividades/${actividad.id}/`, {
           nombre, descripcion, fecha, tipo, duracion
         }, {
           headers: {
@@ -122,7 +122,7 @@ export default {
         return;
       }
 
-      axios.delete(`http://127.0.0.1:8000/api/actividades/${id}/`, {
+      axios.delete(`http://127.0.0.1:8001/api/actividades/${id}/`, {
         headers: {
           Authorization: `Bearer ${token}`  // Agregamos el token en las cabeceras
         }

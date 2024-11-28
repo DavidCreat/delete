@@ -6,7 +6,7 @@ import router from './router';
 import axios from 'axios';
 
 // Configuración global de axios
-axios.defaults.baseURL = 'http://127.0.0.1:8000';  // Base URL del backend
+axios.defaults.baseURL = 'http://127.0.0.1:8001';  // Base URL del backend
 
 createApp(App)
   .use(router)
