@@ -7,7 +7,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-SECRET_KEY = os.getenv("j3xHwrh4pTOy5ds4EmI05sWDvqP0C--OQ7kX08XpJnoIyd3HGZikYJRndF1FWB0sKqo")
+SECRET_KEY = os.getenv("SECRET_KEY", "j3xHwrh4pTOy5ds4EmI05sWDvqP0C--OQ7kX08XpJnoIyd3HGZikYJRndF1FWB0sKqo")
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost 127.0.0.1 [::1]").split(" ")
@@ -61,7 +61,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
+        default=os.environ.get('DATABASE_URL', 'postgres://root:postmalone123@db:5432/fitfusion_db'),
         conn_max_age=600
     )
 }
