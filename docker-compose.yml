@@ -11,7 +11,7 @@ services:
     environment:
       - DEBUG=1
       - SECRET_KEY=j3xHwrh4pTOy5ds4EmI05sWDvqP0C--OQ7kX08XpJnoIyd3HGZikYJRndF1FWB0sKqo
-      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+      - DJANGO_ALLOWED_HOSTS=193.180.209.112/ 127.0.0.1 [::1]
       - DATABASE_URL=mysql://root:postmalone123@db:3306/fitfusion_db
     depends_on:
       - db

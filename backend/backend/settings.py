@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY", "j3xHwrh4pTOy5ds4EmI05sWDvqP0C--OQ7kX08XpJnoIyd3HGZikYJRndF1FWB0sKqo")
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost 127.0.0.1 [::1]").split(" ")
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "193.180.209.112/ 127.0.0.1 [::1]").split(" ")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -67,7 +67,7 @@ DATABASES = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = os.getenv("CORS_ALLOW_ALL_ORIGINS", "False").lower() == "true"
-CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "http://localhost:8080").split(" ")
+CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "http://193.180.209.112/:8080").split(" ")
 CORS_ALLOW_CREDENTIALS = os.getenv("CORS_ALLOW_CREDENTIALS", "False").lower() == "true"
 
 REST_FRAMEWORK = {
